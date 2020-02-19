@@ -61,8 +61,9 @@ private:
 public: 
   int getQuantita() const {return q;}
   
+  // che significa???
   void scarica() {
-    if(q>1) {--q; return;}
+    if(q>1) {--ìq; return;}
     delete c; 
   }
   
