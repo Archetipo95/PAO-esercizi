@@ -4,7 +4,7 @@
 using namespace std;
 
 class C {
-    public:
+public:
     string s;
     C(string x="1"):s(x) {}
     ~C() { cout << s << "Cd "; }
@@ -17,7 +17,7 @@ C F(C p) { return p;}
 C w("3");
 
 class D {
-    public:
+public:
     static C c; //campo dati statico
 };
 

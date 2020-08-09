@@ -71,7 +71,7 @@ public:
 
 template <class T>
 ostream& operator<<(ostream& os, const Trialbero<T>& t) {
-    if(t.root != nullptr) return t.root->rec_print(os);
+    if(t.root) return t.root->rec_print(os);
     return os;
 }
 

@@ -142,7 +142,7 @@ public:
         if(!isEmpty()) {
             nodo* temp = topPtr;
             while(temp->next) temp = temp->next;
-            return temp;
+            return temp->info;
         }else {
             throw Vuoto();
         }

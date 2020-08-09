@@ -17,7 +17,7 @@ int Fun(vector<B*>& v) {
     if(v.empty()) return 0;
     int conta = 0;
     for(auto it = v.begin()+1; it != v.end(); ++it) {
-        if(typeid(*v[0]) != typeid(**it) && dynamic_cast<C*>(*it) && typeid(**it) != typeid(C)) ++conta;
+        if(typeid(*v[0]) != typeid(**it) && dynamic_cast<C*>(*it)) ++conta;
     }
     return conta;
 }

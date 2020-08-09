@@ -30,10 +30,12 @@ public:
 };
 
 int main() {
-    C* p = new C; cout << "Uno\n";
-    p->F("pluto", "paperino"); p->F("topolino"); cout << "Due\n";
-    delete p; cout << "Tre\n";
+    C* p = new C; cout << "UNO\n";
+    p->F("pluto", "paperino"); p->F("topolino"); cout << "DUE\n";
+    delete p; cout << "TRE\n";
 }
+
+
 
 //Attenzio che su if di ~N non ci sono le parentesi
 /*
@@ -41,4 +43,4 @@ Uno
 N2 N2 N2 N2 Due
 pluto~N paperino~N topolino~N pippo~N ~C Tre
 */
-//si crea una coda pluto->paperino->topolino->pippo
+//si crea una coda pluto->paperino->topolino->pippo->nullptr

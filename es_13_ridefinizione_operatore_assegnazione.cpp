@@ -26,7 +26,7 @@ private:
 public:
 	void m() {}
 	
-	// ridefinizione del costruttore di copia di E
+	// ridefinizione del costruttore di assegnazione di E
 	E(const E& e){ 
 		B::operator=(e);
 		D::operator=(e);

@@ -22,7 +22,6 @@ int main() {
     int y=F(F(d)); cout << "QUATTRO" << endl;
 }
 
-
 /*
 C(1) UNO
 C(1) operator=(1) DUE

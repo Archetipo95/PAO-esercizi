@@ -22,7 +22,6 @@ public:
 
     bool operator==(const SmartP& s) const { return ptr == s.ptr;}
     bool operator!=(const SmartP& s) const { return ptr != s.ptr;}
-
 };
 
 class C {

@@ -24,9 +24,9 @@ int main() {
     //d = c;  NON COMPILA QUA
     C& rc=d; 
     D& rd=e; 
-    pc->f(); 
+    pc->f(); // C::f
     pc = pe; 
-    rd.f(); 
-    c.f(); 
-    pc->f();
+    rd.f();  // D::f
+    c.f();   // C::f
+    pc->f(); // C::f
 }

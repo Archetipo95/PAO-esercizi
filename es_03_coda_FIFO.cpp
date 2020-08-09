@@ -53,8 +53,11 @@ public:
     }
     void insert(const T& t) {
         Nodo* aux = new Nodo(t);
-        last->next = aux;
-        last = aux;
+        if(!first) first=last=aux;
+        else { 
+            last->next = aux;
+            last = aux;
+        }
     }
     T removeNext() {
         if(!first) throw Error();
@@ -69,7 +72,7 @@ public:
     }
     T* getNext() const {
         if(!first) return nullptr;
-        return first->info;
+        return &(first->info);
     }
 
     bool operator==(const Coda& c) const {
@@ -108,5 +111,15 @@ public:
 
 int main() {
     cout << "Hello world";
+    
+    Coda<int> a;
+    int x = 1;
+    a.insert(x);
+    
+    int* p = a.getNext();
+    
+    
+    
+    
     return 0;
 }

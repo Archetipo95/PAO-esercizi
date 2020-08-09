@@ -1,22 +1,22 @@
-class A{
+class A {
 public:
-    virtual ~A() = default;
+    virtual ~A() {};
 };
 
-class B: public A{
+class B: public A {
 public:
     ~B() = 0;
 };
 B::~B() = default;
 
-class C: public B{};
+class C: public B {};
 
-class D{
+class D {
 protected:
-    D() = default;
+    D() {};
 };
 
-class E: public D{
+class E: public D {
     E& operator=(const E& e){
         D::operator=(e);
         return *this;

@@ -69,23 +69,34 @@ private:
             return *this;
         }
         ~Brano() {delete ptr;}
-        // se chiedeva un'opportuna interfaccia pubblica servivano anche operator* e operator->
         
+        // se chiedeva un'opportuna interfaccia pubblica servivano anche operator* e operator->
+        FileAudio& operator*() const {
+            return *ptr;
+        }
+
+        FileAudio* operator->() const {
+            return ptr;
+        }
     };
+
     vector<Brano> brani;
+
 public:
+
     vector<Mp3> mp3(double dim, int br) const {
         Mp3* p = nullptr;
         vector<Mp3> v;
         vector<Brano>::const_iterator /*auto*/ cit = brani.begin();  //METODO COSTANTE QUINDI CONST ITERATOR!!!
         for(cit; cit != brani.end(); ++cit) {
             p = dynamic_cast<Mp3*>(cit->ptr);    //cit->ptr ha tipo FileAudio* const "il puntatore è costante"
-            if(p != nullptr && p->getSize()>dim && p->getBitrate()>br)
+            if(p && p->getSize()>dim && p->getBitrate()>br)
                 v.push_back(*p);
         }
+        return v;
     }
 
-    vector<FileAudio*> braniQulita() const{
+    vector<FileAudio*> braniQualita() const{
         WAV* p = nullptr;
         vector<FileAudio*> v;
         auto cit = brani.begin();
@@ -94,12 +105,14 @@ public:
             if((cit->ptr)->qualita() && (!p || p->getLossLess()))
                 v.push_back(cit->ptr);
         }
+        return v;
     }
 
     void insert(Mp3* m) {
-        for(auto cit = brani.begin(); cit != brani.end(); ++cit)
+        for(auto cit = brani.begin(); cit != brani.end(); ++cit){
             if(*m == *((*cit).ptr)) return;
-            brani.push_back(m);
+        }   
+        brani.push_back(m);
     }
 };
 

@@ -57,7 +57,7 @@ int main()
     //(p4->n())->m();
     //(p5->n())->g();
     //(dynamic_cast<B*>(p1))->m();
-    //(static_cast<C*>(p2))->k();
+    //(static_cast<C*>(p2))->k();   errore runtime
 
     return 0;
 }
