@@ -1,7 +1,9 @@
+// Definire un template di classe Vettore<T, sz> in modo da produrre le stampe date
+
 #include<iostream>
 using namespace std;
 
-// VERSIONE 1
+// Soluzione 1
 template <class T = int, unsigned int _size = 0>
 class Vettore {
 private:
@@ -38,6 +40,8 @@ public:
     return a[0];
   }
 };
+
+// Parte di codice fornita
 
 template <class T, unsigned int sz>
 std::ostream& operator<<(std::ostream& os, const Vettore<T,sz>& v) {
