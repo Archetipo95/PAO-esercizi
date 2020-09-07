@@ -1,30 +1,31 @@
+// Esercizio "cosa stampa"
+// Per ogni istruzione dire se compila o meno, se produce errore a run time e cosa stampa.
+
 #include <iostream>
 using namespace std;
 
 class A {
   bool x;
-
- public:
-  virtual ~A(){};
+  public:
+    virtual ~A(){};
 };
 
 class B {
   bool y;
-
- public:
-  virtual void f() const { cout << "B::f "; }
+  public:
+    virtual void f() const { cout << "B::f "; }
 };
 
-class C : public A {};
+class C: public A {};
 
-class D : public B {
- public:
-  void f() const { cout << "D::f "; }
+class D: public B {
+  public:
+    void f() const { cout << "D::f "; }
 };
 
-class E : public D {
- public:
-  void f() const { cout << "E::f "; }
+class E: public D {
+  public:
+    void f() const { cout << "E::f "; }
 };
 
 template <class T>
@@ -43,6 +44,7 @@ void Fun(const T& ref) {
     pE->f();
     return;
   }
+
   if (pB) {
     cout << "B ";
     pB->f();
@@ -60,7 +62,7 @@ void Fun(const T& ref) {
   }
 }
 
-int main(int argc, char const* argv[]) {
+int main() {
   C c;
   D d;
   E e;
