@@ -1,5 +1,6 @@
-#include <iostream>
+// Esercizio "cosa stampa"
 
+#include <iostream>
 using namespace std;
 
 class A {

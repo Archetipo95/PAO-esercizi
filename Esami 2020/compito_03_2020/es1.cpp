@@ -1,6 +1,4 @@
-#include <iostream>
-
-using namespace std;
+// Esercizio vero o falso
 
 class A {
 public:
