@@ -1,7 +1,9 @@
-#include <iostream>
+// Scrivere un template di classe SmartP<T> di puntatori smart in modo che produca le stampe date
 
+#include <iostream>
 using namespace std;
 
+// Soluzione
 template <class T>
 class SmartP {
 private:
@@ -23,6 +25,8 @@ public:
     bool operator==(const SmartP& s) const { return ptr == s.ptr;}
     bool operator!=(const SmartP& s) const { return ptr != s.ptr;}
 };
+
+// Codice dato
 
 class C {
 public: 
