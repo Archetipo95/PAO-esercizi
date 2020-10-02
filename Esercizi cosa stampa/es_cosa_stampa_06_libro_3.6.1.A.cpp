@@ -39,7 +39,7 @@ int main()
 // 2 distruttori invocati. uno per il parametro passato e uno per il parametro di ritorno
 /*
 Programma 1
-5~Cd 5~Cd uno
-5~Cd due
-5~Cd 5~Cd 5~Cd 4~Cd 3~Cd 
+5Cd 5Cd uno
+5Cd 5Cd due
+5Cd 5Cd 5Cd 4Cd 3Cd
 */
