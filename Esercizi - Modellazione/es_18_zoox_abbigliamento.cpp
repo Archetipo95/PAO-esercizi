@@ -1,8 +1,3 @@
-// ESERCIZIO SVOLTO IN AULA NELLE LEZIONI DEL 20-22/01/2015
-//soluzione dell'esercizio "Zoox" (primo appello dell'a.a. 13/14) come discussa in aula nelle lezioni del 20-22/01/2015.
-//Soluzione by Ranzato
-//URL: http://pastebin.com/A8j355kf
-
 #include<list>
 #include<vector>
 #include<string>
