@@ -176,10 +176,7 @@ int main() {
 
 
 /*
-// ESERCIZIO SVOLTO IN AULA NELLA LEZIONE DEL 23/1/2015
-//soluzione dell'esercizio dList (lista doppiamente linkata, primo appello dell'a.a. 13/14) come discussa in aula nell'ultima lezione del 23/1/2015.
-//Soluzione by Ranzato
-//URL: http://pastebin.com/JxRX6AAk
+// ESERCIZIO SVOLTO IN AULA
 
 template<class T>
 class dList {
